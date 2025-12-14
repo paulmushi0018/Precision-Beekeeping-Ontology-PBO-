@@ -1,0 +1,3276 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO/"
+     xml:base="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ssn="http://www.w3.org/ns/ssn/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:sosa="http://www.w3.org/ns/sosa/"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/"
+     xmlns:revisedPBO="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#aboutPrerequisite -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#aboutPrerequisite">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isPrerequisiteWithAlert"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Alert"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringPrerequisite"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#acquiresFromSensor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#acquiresFromSensor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isSourceForAcquisition"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DataAcquisition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#classifiedAs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#classifiedAs">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#classifies"/>
+        <rdfs:domain rdf:resource="https://www.eionet.europa.eu/gemet/en/concept/762"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisMelliferaMellifera"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#classifies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#classifies">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisMelliferaMellifera"/>
+        <rdfs:range rdf:resource="https://www.eionet.europa.eu/gemet/en/concept/762"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#collectsDataFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#collectsDataFrom">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#providesDataTo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DataLogger"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#contains -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#contains">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isContainedIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SmartDevice"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#givesAlertAboutDevice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#givesAlertAboutDevice">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isGivenWithAlert"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Alert"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasAlert -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasAlert">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isAlertOfSystem"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Alert"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasAnatomicalPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasAnatomicalPart">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isAnatomicalPartOf"/>
+        <rdfs:domain rdf:resource="https://www.eionet.europa.eu/gemet/en/concept/762"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AnatomicalPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasBeeHivePart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasBeeHivePart">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isPartOfBeeHive"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHivePart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasBeeRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasBeeRole">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isRoleOfBee"/>
+        <rdfs:domain rdf:resource="https://www.eionet.europa.eu/gemet/en/concept/762"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasComponent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isComponentOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasConnectivityStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasConnectivityStatus">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isStatusOfConnectivity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#TelemetrySystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ConnectivityStatus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasCurrentPosition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasCurrentPosition">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isCurrentPositionOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GeoPositionObservation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasMonitoringStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasMonitoringStatus">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isStatusOfMonitoringSystem"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystemStatus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasPowerStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasPowerStatus">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isStatusOfPower"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerSupplySystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerStatus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasPowerSupply -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasPowerSupply">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isPowerSystemOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerSupplySystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasPrerequisite -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasPrerequisite">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isPrerequisiteOfSystem"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringPrerequisite"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasRole">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isRoleOfOrganization"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organization"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ServiceProviderRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hostsColony -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hostsColony">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isHostedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+        <rdfs:range rdf:resource="https://agrovoc.fao.org/browse/agrovoc/en/page/c_857"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#involvesDevice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#involvesDevice">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isInvolvedInProcess"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isAlertOfSystem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isAlertOfSystem">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Alert"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isAnatomicalPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isAnatomicalPartOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AnatomicalPart"/>
+        <rdfs:range rdf:resource="https://www.eionet.europa.eu/gemet/en/concept/762"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isComponentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isComponentOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Device"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isContainedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isContainedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SmartDevice"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isCurrentPositionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isCurrentPositionOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GeoPositionObservation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isGivenWithAlert -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isGivenWithAlert">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Device"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Alert"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isHostedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isHostedBy">
+        <rdfs:domain rdf:resource="https://agrovoc.fao.org/browse/agrovoc/en/page/c_857"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isInvolvedInProcess -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isInvolvedInProcess">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Device"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isLocationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isLocationOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#locatedAt"/>
+        <rdfs:domain rdf:resource="https://agrovoc.fao.org/browse/agrovoc/en/page/c_8872"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isManagedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isManagedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#managesHive"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeekeeperRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isMonitoredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isMonitoredBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#monitorsHive"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isObservedPropertyOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isObservedPropertyOf">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isPartOfBeeHive -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isPartOfBeeHive">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHivePart"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isPowerSystemOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isPowerSystemOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerSupplySystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isPoweredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isPoweredBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#powersSystem"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerSupplySystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isPrerequisiteOfSystem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isPrerequisiteOfSystem">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringPrerequisite"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isPrerequisiteWithAlert -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isPrerequisiteWithAlert">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringPrerequisite"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Alert"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isRealizedBySystem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isRealizedBySystem">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#realizesProcess"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isRoleOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isRoleOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#playsRole"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeekeeperRole"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isRoleOfBee -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isRoleOfBee">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeRole"/>
+        <rdfs:range rdf:resource="https://www.eionet.europa.eu/gemet/en/concept/762"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isRoleOfOrganization -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isRoleOfOrganization">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ServiceProviderRole"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isSourceForAcquisition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isSourceForAcquisition">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DataAcquisition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isStatusOfConnectivity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isStatusOfConnectivity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ConnectivityStatus"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#TelemetrySystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isStatusOfMonitoringSystem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isStatusOfMonitoringSystem">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystemStatus"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isStatusOfPower -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isStatusOfPower"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isTransmissionMediumFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isTransmissionMediumFor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#transmitsDataVia"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#TelemetrySystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DataLogger"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isUsedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isUsedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#usesSensor"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isUsedInProcess -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isUsedInProcess">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#usesDevice"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Device"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isViolatedBySystem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#isViolatedBySystem">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#violatesPrerequisite"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringPrerequisite"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#locatedAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#locatedAt">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+        <rdfs:range rdf:resource="https://agrovoc.fao.org/browse/agrovoc/en/page/c_8872"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#managesHive -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#managesHive">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeekeeperRole"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#monitorsHive -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#monitorsHive">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#playsRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#playsRole">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeekeeperRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#powersSystem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#powersSystem">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerSupplySystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#providesDataTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#providesDataTo">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DataLogger"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#providesServiceTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#providesServiceTo">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#receivesServiceFrom"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ServiceProviderRole"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeekeeperRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#realizesProcess -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#realizesProcess">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#receivesServiceFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#receivesServiceFrom">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeekeeperRole"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ServiceProviderRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#transmitsDataVia -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#transmitsDataVia">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DataLogger"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#TelemetrySystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#triggeredByAlert -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#triggeredByAlert">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#triggersProcess"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Alert"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#triggersProcess -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#triggersProcess">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Alert"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#usesDevice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#usesDevice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#usesSensor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#usesSensor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#violatesPrerequisite -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#violatesPrerequisite">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringPrerequisite"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hasFeatureOfInterest -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/isFeatureOfInterestOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/isFeatureOfInterestOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/isObservedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isObservedBy">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/observes"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SmartDevice"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/observedProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/observedProperty">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/observes -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/observes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SmartDevice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasAcceleration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasAcceleration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AccelerationObservation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">resultant magnitude of acceleration</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasAcousticState -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasAcousticState">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AcousticPatternObservation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">classified state as Normal, swarm preparation, queenless or disturbed</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasAltitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasAltitude">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GeoPositionObservation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasApiaryId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasApiaryId">
+        <rdfs:domain rdf:resource="https://agrovoc.fao.org/browse/agrovoc/en/page/c_8872"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">identifier of the apiary</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasCO2Concentration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasCO2Concentration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#CO2ConcentrationObservation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">CO2 concentration in parts per million</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasCO2IncreaseRate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasCO2IncreaseRate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#CO2ConcentrationObservation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">CO2 increase rate per hour</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasCO2Threshold -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasCO2Threshold">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHiveStatus"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Threshold to flag abnormal levels</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasDominantFrequency -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasDominantFrequency">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AcousticPatternObservation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">dominant frequency in Hz</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasGeofenceStatusLabel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasGeofenceStatusLabel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHiveStatus"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Hive is located at either Inside apiary, Outside apiary, or Unknown)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasHiveId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasHiveId">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Identifier of the hive</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasLatitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasLatitude">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GeoPositionObservation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasLongitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasLongitude">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GeoPositionObservation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasMovementSpikeFlag -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasMovementSpikeFlag">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AccelerationObservation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">If there is exceeds in threshold on movement it is true otherwise false</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasObservationDuration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasObservationDuration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#VarroaDropObservation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">duration of the counting interval as either 24 hrs, 48 hrs etc</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasRelativeHumidity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasRelativeHumidity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#HumidityObservation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">internal humidity in %</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasSoundPressureLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasSoundPressureLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AcousticPatternObservation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">overall sound pressure level in DB</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasTemperature">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#TemperatureObservation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasVarroaDropCount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasVarroaDropCount">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#VarroaDropObservation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Number of mites counted on the sticky board</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasVarroaDropRate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasVarroaDropRate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#VarroaDropObservation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Varroa drop rate of mites per day</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasVarroaRisk -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasVarroaRisk">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHiveStatus"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">category of the varroa risk as low, moderate or high</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasVentilationStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasVentilationStatus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHiveStatus"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Hive ventilation status as either Normal, poor or critical</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#hasWeight">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">current hive weight in kg</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#recordedAt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#recordedAt">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">local date time of the observation</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#BiologicalObject -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#BiologicalObject">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalBody"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organism -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organism">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#BiologicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organization -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organization">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalBody -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalBody">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalPlace -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalPlace">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Abdomen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Abdomen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AnatomicalPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Acceleration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Acceleration">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AccelerationObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AccelerationObservation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AcousticEmitter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AcousticEmitter">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AcousticPattern -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AcousticPattern">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AcousticPatternObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AcousticPatternObservation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AdultStage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AdultStage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GrowthStage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Alert -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Alert">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AmbientTemperature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AmbientTemperature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Temperature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AmbientTemperatureObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AmbientTemperatureObservation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#TemperatureObservation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AnatomicalPart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AnatomicalPart">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#BiologicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Antenna -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Antenna">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AnatomicalPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Apis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Apis">
+        <rdfs:subClassOf rdf:resource="https://www.eionet.europa.eu/gemet/en/concept/762"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisAndremiformis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisAndremiformis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Apis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisCelliferaCapensis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisCelliferaCapensis">
+        <rdfs:subClassOf rdf:resource="https://agrovoc.fao.org/browse/agrovoc/en/page/c_534"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisCerana -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisCerana">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Apis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisDorsata -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisDorsata">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Apis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisFlorae -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisFlorae">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Apis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisKoshevnicovi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisKoshevnicovi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Apis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisLaboriosa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisLaboriosa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Apis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisMelliferaAdansonii -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisMelliferaAdansonii">
+        <rdfs:subClassOf rdf:resource="https://agrovoc.fao.org/browse/agrovoc/en/page/c_534"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisMelliferaCarnica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisMelliferaCarnica">
+        <rdfs:subClassOf rdf:resource="https://agrovoc.fao.org/browse/agrovoc/en/page/c_534"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisMelliferaCaucasica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisMelliferaCaucasica">
+        <rdfs:subClassOf rdf:resource="https://agrovoc.fao.org/browse/agrovoc/en/page/c_534"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisMelliferaLigustica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisMelliferaLigustica">
+        <rdfs:subClassOf rdf:resource="https://agrovoc.fao.org/browse/agrovoc/en/page/c_534"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisMelliferaLittorea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisMelliferaLittorea">
+        <rdfs:subClassOf rdf:resource="https://agrovoc.fao.org/browse/agrovoc/en/page/c_534"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisMelliferaMellifera -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisMelliferaMellifera">
+        <rdfs:subClassOf rdf:resource="https://agrovoc.fao.org/browse/agrovoc/en/page/c_534"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisMelliferaMonticola -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisMelliferaMonticola">
+        <rdfs:subClassOf rdf:resource="https://agrovoc.fao.org/browse/agrovoc/en/page/c_534"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisMelliferaUnicolor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisMelliferaUnicolor">
+        <rdfs:subClassOf rdf:resource="https://agrovoc.fao.org/browse/agrovoc/en/page/c_534"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisNigrocincta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisNigrocincta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Apis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisNuluensis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ApisNuluensis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Apis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ArduinoBoard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ArduinoBoard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DataLogger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Bar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Bar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHivePart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Base -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Base">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHivePart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Battery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Battery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DevicePart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHivePart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHivePart">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DevicePart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHiveStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHiveStatus">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeRole">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeekeeperRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeekeeperRole">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeekeepingUtensil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeekeepingUtensil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Boots -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Boots">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ProtectiveGear"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BroodChamber -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BroodChamber">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHivePart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#CO2Concentration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#CO2Concentration">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#CO2ConcentrationObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#CO2ConcentrationObservation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#CatcherBox -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#CatcherBox">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHivePart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#CombFoundation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#CombFoundation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHivePart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Connected -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Connected">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ConnectivityStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ConnectivityAlert -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ConnectivityAlert">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Alert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ConnectivityPrerequisite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ConnectivityPrerequisite">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringPrerequisite"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ConnectivityStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ConnectivityStatus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystemStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DadantHive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DadantHive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DataAcquisition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DataAcquisition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DataAnalysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DataAnalysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DataLogger -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DataLogger">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SmartDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DataStorage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DataStorage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DataTransmission -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DataTransmission">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Device">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DevicePart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DevicePart">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Disconnected -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Disconnected">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ConnectivityStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Disturbed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Disturbed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHiveStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DroneBeeRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DroneBeeRole">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#EggStage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#EggStage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GrowthStage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#EntranceGateController -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#EntranceGateController">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Esp32Board -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Esp32Board">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DataLogger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#FieldBee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#FieldBee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WorkerBeeRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#FixedComb -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#FixedComb">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHivePart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#FlowBeeHive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#FlowBeeHive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ForagerBee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ForagerBee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#FieldBee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Frame -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Frame">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHivePart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#FrameHolder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#FrameHolder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeekeepingUtensil"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#FramesHive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#FramesHive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GPSTracker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GPSTracker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SmartDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GSMModule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GSMModule">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#TelemetrySystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GasSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GasSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GatewayDevice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GatewayDevice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SmartDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GeoPosition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GeoPosition">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GeoPositionObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GeoPositionObservation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Gloves -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Gloves">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ProtectiveGear"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GrowthStage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GrowthStage">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GuardBee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GuardBee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#HiveBee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#HarvestingEquipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#HarvestingEquipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Head -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Head">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AnatomicalPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#HeaterController -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#HeaterController">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#HiveBee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#HiveBee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WorkerBeeRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#HiveEntrance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#HiveEntrance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHivePart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#HiveStand -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#HiveStand">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHivePart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#HoneyFilter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#HoneyFilter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#HarvestingEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#HoneySuper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#HoneySuper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHivePart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Humidity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Humidity">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#HumidityObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#HumidityObservation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#HumiditySensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#HumiditySensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Temperature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#TemperatureObservation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#LangstrothBeeHive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#LangstrothBeeHive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#LoRaModule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#LoRaModule">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#TelemetrySystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MatedBee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MatedBee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#QueenBeeRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringPrerequisite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringPrerequisite">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringProcess -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringProcess">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringReadinessStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringReadinessStatus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystemStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystem">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystemStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystemStatus">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MovementTrafficSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MovementTrafficSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#NetworkRouter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#NetworkRouter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Normal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Normal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHiveStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#NotReady -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#NotReady">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringReadinessStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#NurseBee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#NurseBee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#HiveBee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ObservationalBeeHive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ObservationalBeeHive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PestDetectorSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PestDetectorSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PollenTrap -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PollenTrap">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHivePart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerAlert -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerAlert">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Alert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerContoller -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerContoller">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DevicePart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerCritical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerCritical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerLow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerLow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerOkay -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerOkay">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerPrerequisite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerPrerequisite">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringPrerequisite"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerStatus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystemStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerSupplySystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PowerSupplySystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PropolisTrap -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#PropolisTrap">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHivePart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ProtectiveGear -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ProtectiveGear">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#QueenBeeExcluder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#QueenBeeExcluder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHivePart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#QueenBeeRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#QueenBeeRole">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Queenless -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Queenless">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHiveStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#RFIDReader -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#RFIDReader">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SmartDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#RaspberryPiBoard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#RaspberryPiBoard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#DataLogger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Ready -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Ready">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringReadinessStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ScoutBee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ScoutBee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#FieldBee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SensorFailure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SensorFailure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SensorNetworkStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SensorFailureAlert -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SensorFailureAlert">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Alert"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SensorNetworkStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SensorNetworkStatus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringSystemStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SensorOkay -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SensorOkay">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SensorNetworkStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SensorPrerequisite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SensorPrerequisite">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#MonitoringPrerequisite"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ServiceProviderRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ServiceProviderRole">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SmartDevice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SmartDevice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SolarPanel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SolarPanel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SoundVibrationSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SoundVibrationSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SwarmPreparation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SwarmPreparation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHiveStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#TelemetrySystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#TelemetrySystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SmartDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Temperature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Temperature">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#TemperatureObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#TemperatureObservation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#TemperatureSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#TemperatureSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Thorax -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Thorax">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#AnatomicalPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#TopBarBeeHive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#TopBarBeeHive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#TopCover -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#TopCover">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHivePart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Torch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Torch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeekeepingUtensil"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#UncappingFork -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#UncappingFork">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#HarvestingEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#VarroaDrop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#VarroaDrop">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#VarroaDropObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#VarroaDropObservation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#VentilationController -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#VentilationController">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#VirginBee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#VirginBee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#QueenBeeRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeakSignal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeakSignal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ConnectivityStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Weight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Weight">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WiFiModule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WiFiModule">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#TelemetrySystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WorkerBeeRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WorkerBeeRole">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Actuator -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Actuator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SmartDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/ObservableProperty -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Observation -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Observation"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Sensor -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#SmartDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- https://agrovoc.fao.org/browse/agrovoc/en/page/c_14350 -->
+
+    <owl:Class rdf:about="https://agrovoc.fao.org/browse/agrovoc/en/page/c_14350">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeekeepingUtensil"/>
+        <rdfs:label xml:lang="en">BeeSmoker_</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://agrovoc.fao.org/browse/agrovoc/en/page/c_25999 -->
+
+    <owl:Class rdf:about="https://agrovoc.fao.org/browse/agrovoc/en/page/c_25999">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#HarvestingEquipment"/>
+        <rdfs:label xml:lang="en">HoneyExtractor_</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://agrovoc.fao.org/browse/agrovoc/en/page/c_29815 -->
+
+    <owl:Class rdf:about="https://agrovoc.fao.org/browse/agrovoc/en/page/c_29815">
+        <rdfs:subClassOf rdf:resource="https://agrovoc.fao.org/browse/agrovoc/en/page/c_534"/>
+        <rdfs:label xml:lang="en">ApisMelliferaScutellata_</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://agrovoc.fao.org/browse/agrovoc/en/page/c_4204 -->
+
+    <owl:Class rdf:about="https://agrovoc.fao.org/browse/agrovoc/en/page/c_4204">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GrowthStage"/>
+        <rdfs:label xml:lang="en">LarvaStage_</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://agrovoc.fao.org/browse/agrovoc/en/page/c_534 -->
+
+    <owl:Class rdf:about="https://agrovoc.fao.org/browse/agrovoc/en/page/c_534">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Apis"/>
+        <rdfs:label xml:lang="en">ApisMellifera_</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://agrovoc.fao.org/browse/agrovoc/en/page/c_6374 -->
+
+    <owl:Class rdf:about="https://agrovoc.fao.org/browse/agrovoc/en/page/c_6374">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#GrowthStage"/>
+        <rdfs:label xml:lang="en">PupaStage_</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://agrovoc.fao.org/browse/agrovoc/en/page/c_857 -->
+
+    <owl:Class rdf:about="https://agrovoc.fao.org/browse/agrovoc/en/page/c_857">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection"/>
+        <rdfs:label xml:lang="en">BeeColony_</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://agrovoc.fao.org/browse/agrovoc/en/page/c_8872 -->
+
+    <owl:Class rdf:about="https://agrovoc.fao.org/browse/agrovoc/en/page/c_8872">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalPlace"/>
+        <rdfs:label xml:lang="en">Apiary_</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://agrovoc.fao.org/browse/agrovoc/en/page/c_9197 -->
+
+    <owl:Class rdf:about="https://agrovoc.fao.org/browse/agrovoc/en/page/c_9197">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeekeepingUtensil"/>
+        <rdfs:label xml:lang="en">BeeBrush_</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://agrovoc.fao.org/browse/agrovoc/en/page/c_9198 -->
+
+    <owl:Class rdf:about="https://agrovoc.fao.org/browse/agrovoc/en/page/c_9198">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#ProtectiveGear"/>
+        <rdfs:label xml:lang="en">BeeVeil_</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.eionet.europa.eu/gemet/en/concept/762 -->
+
+    <owl:Class rdf:about="https://www.eionet.europa.eu/gemet/en/concept/762">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Organism"/>
+        <rdfs:label xml:lang="en">Bee_</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">12.34</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T14:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">19.99</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T23:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">18.24</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T00:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">13.47</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T01:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">13.2</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T02:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">14.86</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T03:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">12.34</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T04:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">12.77</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T05:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">13.9</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T06:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs18">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15.16</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T07:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs19">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">11.72</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T08:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">12.38</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T15:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">12.75</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T09:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">12.52</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T10:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs22">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">11.5</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T11:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs23">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">12.92</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T12:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs24">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">14.6</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T13:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs25">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">11.91</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T14:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs26 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs26">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">12.16</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T15:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs27 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs27">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">11.63</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T16:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs28 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs28">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">11.43</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T17:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs29 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs29">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">11.03</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T18:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15.73</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T16:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs30">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10.6</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T19:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs31 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs31">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">11.67</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T20:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs32">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">13.48</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T21:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs33 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs33">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">20.08</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T22:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs34 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs34">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15.84</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T23:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs35">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">16.57</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T00:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs36 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs36">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15.75</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T01:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs37 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs37">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">19.5</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T02:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs38 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs38">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">12.33</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T03:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs39 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs39">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">12.67</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T04:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">17.63</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T17:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs40 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs40">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">11.43</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T05:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs41 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs41">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">14.14</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T06:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs42 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs42">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">11.0</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T07:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs43 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs43">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15.28</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T08:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs44 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs44">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15.49</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T09:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs45 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs45">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15.24</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T10:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs46 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs46">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15.62</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T11:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs47 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs47">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">20.91</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T12:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs48 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs48">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15.63</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T13:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">13.35</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T18:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">13.93</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T19:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">12.52</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T20:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">20.56</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T21:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InTemperatureObs9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#InternalTemperatureObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">19.91</revisedPBO:hasTemperature>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T22:15:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+        <revisedPBO:hasHiveId>Schwartau1</revisedPBO:hasHiveId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Wurzburg"/>
+        <revisedPBO:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">52.63</revisedPBO:hasWeight>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T13:00:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Wurzburg"/>
+        <revisedPBO:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">52.67</revisedPBO:hasWeight>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-06T01:00:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Wurzburg"/>
+        <revisedPBO:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">52.89</revisedPBO:hasWeight>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-06T13:00:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Wurzburg"/>
+        <revisedPBO:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">52.38</revisedPBO:hasWeight>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-07T01:00:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">50.74</revisedPBO:hasWeight>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-01T13:00:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">50.7</revisedPBO:hasWeight>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T01:00:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">50.61</revisedPBO:hasWeight>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T13:00:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">50.74</revisedPBO:hasWeight>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T01:00:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">50.8</revisedPBO:hasWeight>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T13:00:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs18">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">50.65</revisedPBO:hasWeight>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-04T01:00:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs19">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">50.41</revisedPBO:hasWeight>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-04T13:00:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Wurzburg"/>
+        <revisedPBO:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">52.67</revisedPBO:hasWeight>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T01:00:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">50.17</revisedPBO:hasWeight>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-05T01:00:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">50.05</revisedPBO:hasWeight>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-05T13:00:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs22">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">49.88</revisedPBO:hasWeight>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-06T01:00:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs23">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">50.46</revisedPBO:hasWeight>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-06T13:00:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs24">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Schwartau"/>
+        <revisedPBO:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">50.55</revisedPBO:hasWeight>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-07T01:00:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Wurzburg"/>
+        <revisedPBO:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">52.7</revisedPBO:hasWeight>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T13:00:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Wurzburg"/>
+        <revisedPBO:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">52.7</revisedPBO:hasWeight>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T01:00:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Wurzburg"/>
+        <revisedPBO:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">52.63</revisedPBO:hasWeight>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-03T13:00:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Wurzburg"/>
+        <revisedPBO:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">52.63</revisedPBO:hasWeight>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-04T01:00:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Wurzburg"/>
+        <revisedPBO:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">52.67</revisedPBO:hasWeight>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-04T13:00:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Wurzburg"/>
+        <revisedPBO:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">52.6</revisedPBO:hasWeight>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-05T01:00:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObs9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#WeightObservation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Wurzburg"/>
+        <revisedPBO:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">52.57</revisedPBO:hasWeight>
+        <revisedPBO:recordedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-05T13:00:00</revisedPBO:recordedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Wurzburg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#Wurzburg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulk/ontologies/2025/10/revisedPBO#BeeHive"/>
+        <revisedPBO:hasHiveId>Wurzburg1</revisedPBO:hasHiveId>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

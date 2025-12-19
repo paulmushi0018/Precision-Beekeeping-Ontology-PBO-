@@ -12,7 +12,7 @@ Precision beekeeping Ontology (PBO) available at https://github.com/paulmushi001
 ## Repository contents
 | File | Description |
 |------|-------------|
-| `revisedPBO.rdf` |The PBO ontology in OWL/RDF format |
+| `Precision_Beekeeping_Ontology_PBO.rdf` |The PBO ontology in OWL/RDF format |
 | `README.md`| This summary file | 
 | `LICENSE.md`| PBO ontology License file | 
 | `Documentation_for_PBO_ontology.pdf` | Full technical documentation of the PBO ontology |

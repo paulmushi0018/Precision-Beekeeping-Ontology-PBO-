@@ -20,10 +20,10 @@ Precision beekeeping Ontology (PBO) available at https://github.com/paulmushi001
 ## Ontology features
 
 -Hierarchically defined classes and relationships for:
- -Abstract concepts such as monitoring system status, beehive status, and bee growth stage.
+ -Quality class that contains subclasses such as monitoring system status, beehive status, observable property, and bee growth stage.
  -Physical object; a Device that includes a smart device, a device part, a power supply system, a network router, protective   gear, harvesting equipment and solar panel.
  -Social object such as the Beekeeper role, bee role, alert, monitoring system, service provider role and Bee colony.
- -Observation and Observation property for temperature, humidity, weight, acceleration, acoustic sound, CO2 concentration,     varroa drop and geo position.
+ -Event class that has observation and process subclasses; observation contains subclasses including temperature, humidity, weight, acceleration, acoustic sound, CO2 concentration, varroa drop and geo position.
 
 -Alignment with external controlled vocabularies and ontologies:
   - AGROVOC (https://agrovoc.fao.org/browse/agrovoc/en/)

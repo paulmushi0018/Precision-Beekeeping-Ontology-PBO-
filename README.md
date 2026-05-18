@@ -174,7 +174,7 @@ WHERE {
         pbo:hasTemperature ?temp3 .
   FILTER(?time2 = ?time1 + "PT1H"^^xsd:duration)
   FILTER(?time3 = ?time2 + "PT1H"^^xsd:duration)
-  # either of three hours is too cold
+  # keep cases where at least one of the three hourly readings is above 20°C
   FILTER(?temp1 > 20.0 || ?temp2 > 20.0 || ?temp3 > 20.0)
 }
 ORDER BY ?time1
